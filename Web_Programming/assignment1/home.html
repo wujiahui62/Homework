@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web 1 - Assign1</title>
+	<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+	<header>
+		<div class='title'>Assign 1</div>
+	  <nav>
+		<ul id="menu">
+			<li><a href="#" class="home"><span>Home</span></a><div class="dot"></div></li>
+			<li><a href="#" class="highlight"><span>Settings</span></a><div class="dot"></div></li>
+			<li><a href="#" class="highlight"><span>Products</span></a><div class="dot"></div></li>
+			<li><a href="#" class="highlight"><span>User Information</span></a><div class="dot"></div></li>
+			<li><a href="#" class="highlight"><span>Help</span></a><div class="dot"></div></li>
+		</ul>
+	  </nav>
+	</header>
+
+	<main>
+		<div id='spacer_top'></div>
+		<section id="dashboard">
+
+			<h3>Dashboard</h3>
+ 				<table>
+				<tr>
+					<td class="Dashboard"><img src="images/images/d1.gif" alt="d1"><br><a href="#">Users</a></td>
+					<td class="Dashboard"><img src="images/images/d2.gif" alt="d2"><br><a href="#">Upload folders</a></td>
+					<td class="Dashboard"><img src="images/images/d3.gif" alt="d3"><br><a href="#">Photo galleries</a></td>
+					<td class="Dashboard"><img src="images/images/d4.gif" alt="d4"><br><a href="#">Configuration</a></td>
+				</tr>
+			</table>
+ 		</section>
+
+		<section id="table_temp">
+			<h3>Table Template</h3>
+			<table class="template">
+			<colgroup>
+    			<col class="ten" />
+   				<col class="twenty" />
+    			<col class="ten" />
+    			<col class="twenty" />
+    			<col class="ten" />
+    			<col class="ten" />
+    			<col class="twenty" />
+  				</colgroup>
+				<tr>
+					<th>No.</th>
+					<th>Status</th>
+					<th>ID# <img src="images/images/asc.gif" alt="asc"></th>
+					<th>Full Name <img src="images/images/desc.gif" alt="desc"></th>
+					<th>Date</th>
+					<th>Price</th>
+					<th>Actions</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Approved</td>
+					<td>FB-H061</td>
+					<td>Randy Connolly</td>
+					<td>01/15/2012</td>
+					<td>$88.38</td>
+					<td><img src="images/images/action1.gif" alt="action1"><img src="images/images/action2.gif" alt="action2"><img src="images/images/action3.gif" alt="action3"><img src="images/images/action4.gif" alt="action4"></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><span class="pending">Pending</span><img src="images/images/pending.gif" alt="pending"></td>
+					<td>FB-H061</td>
+					<td>Ricardo Hoar</td>
+					<td>01/18/2012</td>
+					<td>$136.00</td>
+					<td><img src="images/images/action1.gif" alt="action1"><img src="images/images/action2.gif" alt="action2"><img src="images/images/action3.gif" alt="action3"><img src="images/images/action4.gif" alt="action4"></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Approved</td>
+					<td>FB-H061</td>
+					<td>Randy Connolly</td>
+					<td>01/18/2012</td>
+					<td>$106.38</td>
+					<td><img src="images/images/action1.gif" alt="action1"><img src="images/images/action2.gif" alt="action2"><img src="images/images/action3.gif" alt="action3"><img src="images/images/action4.gif" alt="action4"></td>
+				</tr>
+			</table>
+			
+		</section>
+
+		<section>
+			<h3>Forms Template</h3>
+			<div>
+			<form>
+			<div class="oneline">
+				Valid check:
+				<span id="first"><input type="text" name=" "></span>
+				<img src="images/images/positive.gif" alt="positive">
+				<a class="green">This is a positive message</a><br></div>
+				<div class="oneline">Return error:
+				<span id="second"><input type="text" name=" "></span>
+				<img src="images/images/negative.gif" alt="negative">
+				<a class="red">This is a negative message</a><br></div>
+				<div class="oneline">City:
+				<span id="third"><input type="text" name=" " list="cities"></span>
+				<datalist id="cities">
+					<option>Calgary</option>
+					<option>Cleveland</option>
+				</datalist><br></div>
+				<div class="oneline">
+				<p id="comm">Comments:</p>
+				<ul class="font">
+					<li><span class="bold">B</span></li>
+					<li><span class="italic">i</span></li>
+					<li>u</li>
+					<li>Code</li>
+					<li>List</li>
+					<li>List=</li>
+					<li>[<span class="sup">*</span>]</li>
+					<li>URL</li>
+					<li>Img</li></ul>
+				</div><br>
+				<div id="comment">
+					<textarea rows="5" cols="80"></textarea><br>
+				</div>
+			</form>
+			</div>
+			
+			<div>
+				<table class="message">
+				<colgroup>
+    			<col class="four" />
+   				<col class="ninty-six" />
+  				</colgroup>
+
+					<tr id="white">
+						<td><img src="images/images/white_ico.png" alt="white_ico.png"></td>
+						<td>White bar for general messages.</td>
+					</tr>
+
+					<tr id="red">
+						<td><img src="images/images/red_ico.png" alt="red_ico.png"></td>
+						<td>This is a negative error message!</td>
+					</tr>
+
+					<tr id="blue">
+						<td><img src="images/images/blue_ico.png" alt="blue_ico.png"></td>
+						<td>Blue bar can ben used for relaxing message feelings.</td>
+					</tr>
+
+					<tr id="green">
+						<td><img src="images/images/green_ico.png" alt="green_ico.png"></td>
+						<td>This is a positive message!</td>
+					</tr>
+
+					<tr id="yellow">
+						<td><img src="images/images/yellow_ico.png" alt="yellow_ico.png"></td>
+						<td>This is a warning!</td>
+					</tr>
+
+				</table>
+			</div>	
+			<div id='spacer_bottom'></div>
+
+		</section>
+	</main>
+
+	<footer>
+		<p id="copyline">&copy; 2015 Your Name Goes Here</p>
+		<p id="navline"><a href="#">Home</a> | <a href="#">Settings</a> | <a href="#">Products</a> | <a href="#">User Information</a> | <a href="#">Help</a></p>
+	</footer>
+</body>
+</html>
