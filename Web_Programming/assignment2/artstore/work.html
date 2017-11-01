@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter5</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- link to bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- link to js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- link to google fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet'>
+	<!-- link to css -->
+	<link rel="stylesheet" href="css/artstore.css">
+
+</head>
+<body id="work">
+	<!-- the first and second nav bar as well as the title and search box in between are in the header section -->
+	<header>
+	<!-- create a container, there are 3 rows in the container, each occupy 12 columns in bootstrap grid -->
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-inverse">
+					<!-- nav bar header contains the icon after collasping and the navbar-text -->
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> 
+                           </button>
+                           <div class="navbar-text" id="navbar-text">
+                    	  	Welcome to <span class="heavy">Art Store</span>, <a href="#" class="textcolor2">Login </a>or <a href="#" class="textcolor2">Create new account</a>
+                    	   </div>
+                        </div>
+                        <!-- nav bar collapse of the first row -->
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                        	<ul class="nav navbar-nav pull-right textcolor1">
+                        		<li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+                        		<li><a href="#"><span class="glyphicon glyphicon-gift"></span> Wish List</a></li>
+                        		<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+                        		<li><a href="#"><span class="glyphicon glyphicon-arrow-right"></span> Checkout</a></li>
+                        	</ul>
+                        </div>						
+					</nav>
+				</div>
+			</div>
+
+			<!-- This row contains the logo and searchbox -->
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="pull-left">Art Store</h1>
+					<form id="search" class="col-md-3 col-sm-3 col-xs-3 pull-right" action="https://web.cs.kent.edu/~aalali1/wb1f17/form/process.php" method="get">
+						<div class="input-group">
+							<input type="text" name="search" class="form-control" placeholder="Search">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- This row contains the second nav bar -->
+			<div class="row">
+        		<div class="col-md-12">
+        			<nav class="navbar navbar-default">
+        				<div class="navbar-header">
+        					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar2">
+        						<span class="icon-bar"></span>
+        						<span class="icon-bar"></span>
+        						<span class="icon-bar"></span> 
+        					</button>
+        				</div>
+        				<div class="collapse navbar-collapse" id="Navbar2">
+        					<ul class="nav navbar-nav navbar2nd">
+        						<li><a href="index.html">Home</a></li>
+        						<li><a href="about.html">About Us</a></li> 
+        						<li class="active"><a href="work.html">Art Works</a></li>
+        						<li><a href="artists.html">Artists</a></li> 
+        						<li class="dropdown">
+        							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        								Specials<span class="caret"></span>
+        							</a>
+        							<ul class="dropdown-menu">
+        								<li><a href="#">Special-1</a></li>
+        								<li><a href="#">Special-2</a></li>
+        							</ul>
+        						</li> 
+        					</ul>
+        				</div>
+        			</nav>
+        		</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- main contains 1 big row, it was devided into 10 and 2 columns, in the 10 column section there are two rows with images (5+7 and 3+3+3+3), and 2 rows as title -->
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10">
+				<!-- this row is just text  -->
+					<div class="row">
+						<div class="col-md-12">
+							<h2>Self-portrait in a Straw Hat</h2>
+							<p>By <a href="#">Louise Elisabeth Lebrum</a></p>
+						</div>
+					</div>
+					<!-- this row is 5+7 columns -->
+					<div class="row">					
+						<div class="col-md-5">
+			            	<img class="img-responsive img-thumbnail" src="images/113010.jpg" alt="113010">
+						</div>
+
+						<div class="col-md-7">
+							<!-- paragraph -->
+							<p>The painting appears, after cleaning, to be an autograph replica of a picture, the original of which was painted in Brussels in 1782 in free imitation of Rubens’s ‘Chapeau de Paille’, which LeBrun had seen in Antwerp. It was exhibited in Paris in 1782 at the Salon de la Correspondance. LeBrun’s original is recorded in a private collection in France.</p>
+							<!-- price -->
+							<p id="price">$700</p>	
+							<!-- button group -->
+							<div class="btn-group">
+	 							<a href="#" class="btn button1" role="button">
+	 								<span class="glyphicon glyphicon-gift"></span> Add to Wish List
+	 							</a>
+	 							<a href="#" class="btn button1" role="button">
+	 								<span class="glyphicon glyphicon-shopping-cart"></span> Add to Shopping Cart
+	 							</a>
+	 						</div>
+							<br><br/>
+							<!-- panel -->
+							<div class="panel panel-default">
+								<div class="panel-heading">Product Details</div>
+								<ul class="list-group">
+									<li class="list-group-item">
+										<div class="row">
+											<div class="col-sm-5 heavy">Date:</div>
+											<div class="col-sm-7">1782</div>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<div class="row">
+											<div class="col-md-5 heavy">Medium:</div>
+											<div class="col-md-7">Oil on canvas</div>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<div class="row">
+											<div class="col-md-5 heavy">Dimensions:</div>
+											<div class="col-md-7">98cm x 71cm</div>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<div class="row">
+											<div class="col-md-5 heavy">Home:</div>
+											<div class="col-md-7"><a href="#">National Gallery, London</a></div>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<div class="row">
+											<div class="col-md-5 heavy">Genres:</div>
+											<div class="col-md-7"><a href="#">Realism, Rococo</a></div>
+										</div>
+									</li>
+									<li class="list-group-item">
+										<div class="row">
+											<div class="col-md-5 heavy">Subjects:</div>
+											<div class="col-md-7"><a href="#">People, Arts</a></div>
+										</div>
+									</li>
+								</ul>
+							</div>							
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Similar Products</h3>
+						</div>
+					</div>
+					<!-- 4 columns in this row, each contains a thumbnail -->
+					<div class="row">
+						<div class="col-md-3">
+							<div class="thumbnail">
+								<img class="img-thumbnail" src="images/thumbs/116010.jpg" alt="116010">
+								<div class="caption">
+									<p class="heavy"><a href="#">Artist Holding a Thistle</a></p>
+									<div class="btn-toolbar" role="toolbar">
+										<button type="button" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-info-sign"></i> View</button>
+										<button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-gift"></i> Wish</button>
+										<button type="button" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</button>
+									</div>										
+								</div>
+							</div>							
+						</div>
+
+						<div class="col-md-3">
+							<div class="thumbnail">
+								<img class="img-thumbnail" src="images/thumbs/120010.jpg" alt="120010">
+								<div class="caption">
+									<p class="heavy"><a href="#">Portrait of Eleanor of Toledo</a></p>
+									<div class="btn-toolbar" role="toolbar">
+										<button type="button" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-info-sign"></i> View</button>
+										<button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-gift"></i> Wish</button>
+										<button type="button" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</button>
+									</div>
+								</div>
+							</div>							
+						</div>
+
+						<div class="col-md-3">
+							<div class="thumbnail">
+								<img class="img-thumbnail" src="images/thumbs/107010.jpg" alt="107010">
+								<div class="caption">
+									<p class="heavy"><a href="#">Madam de Pompadour</a></p>
+									<div class="btn-toolbar" role="toolbar">
+										<button type="button" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-info-sign"></i> View</button>
+										<button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-gift"></i> Wish</button>
+										<button type="button" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</button>
+									</div>										
+								</div>
+							</div>							
+						</div>
+
+						<div class="col-md-3">
+							<div class="thumbnail">
+								<img class="img-thumbnail" src="images/thumbs/106020.jpg" alt="106020">
+								<div class="caption">
+									<p class="heavy"><a href="#">Girl with a Pearl Earring</a></p>
+									<div class="btn-toolbar" role="toolbar">
+										<button type="button" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-info-sign"></i> View</button>
+										<button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-gift"></i> Wish</button>
+										<button type="button" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</button>
+									</div>										
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- This column is the section on the right, it contains 3 panels -->
+				<div class="col-md-2">
+					<!-- panel 1 -->
+					<div class="panel panel-primary">
+						<div class="panel-heading">Cart</div>
+						<div class="panel-body">
+
+							<div class="media">
+								<div class="media-left">
+									<img src="images/tiny/116010.jpg" alt="116010" class="media-object" style="width: 2.5em">
+								</div>
+								<div class="media-body">
+									<h6 class="media-heading"><a href="#">Artist Holding a Thistle</a></h6>
+								</div>
+							</div>
+
+							<div class="media">
+								<div class="media-left">
+									<img src="images/tiny/113010.jpg" alt="113010" class="media-object" style="width: 2.5em">
+								</div>
+								<div class="media-body">
+									<h6 class="media-heading"><a href="#">Self-portrait in a Straw Hat</a></h6>
+								</div>
+							</div>
+
+							<h6>Subtotal: $1200</h6>
+
+							<div class="btn-toolbar" role="toolbar">
+								<button type="button" class="btn btn-primary btn-xs">
+								<i class="glyphicon glyphicon-info-sign"></i> Edit
+								</button>
+								<button type="button" class="btn btn-primary btn-xs">
+								<i class="glyphicon glyphicon-arrow-right"></i> Checkout
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- panel2 -->
+					<div class="panel panel-info">
+						<div class="panel-heading">Popular Artists</div>
+						<div class="panel-body">
+							<ul class="nav nav-stacked">
+       							<li><a href="#">Caravaggio</a></li>
+       							<li><a href="#">Cezanne</a></li>
+       							<li><a href="#">Matisse</a></li>
+       							<li><a href="#">Michelangelo</a></li>
+       							<li><a href="#">Picasso</a></li>
+       							<li><a href="#">Raphael</a></li>
+       							<li><a href="#">Van Gogh</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- panel3 -->
+					<div class="panel panel-info">
+						<div class="panel-heading">Popular Genres</div>
+						<div class="panel-body">
+							<ul class="nav nav-stacked">
+      							<li><a href="#">Baroque</a></li>
+      							<li><a href="#">Cubism</a></li>
+      							<li><a href="#">Impressionism</a></li>
+      							<li><a href="#">Renaissance</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- the footer section has two rows in container fluid, in each row there is a container.  -->
+	<footer class="container-fluid">
+		<div class="row">
+			<div class="container">
+			<!-- this row has a grey background and contains 4 columns -->
+				<div class="row">
+					<div class="col-md-3">
+						<h4><span class="glyphicon glyphicon-info-sign"></span> About Us</h4>
+						<p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+
+					<div class="col-md-3">
+						<h4><span class="glyphicon glyphicon-earphone"></span> Customer Service</h4>
+						<ul class="nav nav-stacked">
+        					<li><a href="#">Delivery Information</a></li>
+        					<li><a href="#">Privacy Policy</a></li>
+        					<li><a href="#">Shipping</a></li>
+        					<li><a href="#">Terms and Conditions</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-3">
+						<h4><span class="glyphicon glyphicon-shopping-cart"></span> Just Ordered</h4>
+						<div class="media">
+							<div class="media-left">
+							<img src="images/tiny/13030.jpg" alt="13030" class="media-object">
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">
+								<a href="#">Arrangement in Grey and Black</a>
+							</h5>
+							<p class="oblique">5 minutes ago</p>
+						</div>
+						</div>
+
+						<div class="media">
+							<div class="media-left">
+								<img src="images/tiny/116010.jpg" alt="116010" class="media-object">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading">
+									<a href="#">Artist Holding a Thistle</a>
+								</h5>
+								<p class="oblique">11 minutes ago</p>
+							</div>
+						</div>
+
+						<div class="media">
+							<div class="media-left">
+								<img src="images/tiny/113010.jpg" alt="113010" class="media-object">
+							</div>
+							<div class="media-body">
+								<h5 class="media-heading">
+									<a href="#">Self-portrait in a Straw Hat</a>
+								</h5>
+								<p class="oblique">23 minutes ago</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<h4><span class="glyphicon glyphicon-envelope"></span> Contact Us</h4>
+						<form action="https://web.cs.kent.edu/~aalali1/wb1f17/form/process.php" method="get">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control formbox" placeholder="Enter name ...">
+								<input type="email" name="email" class="form-control formbox" placeholder="Enter email ...">
+								<textarea name="message" class="form-control formbox" rows="3" placeholder="Enter message ..."></textarea>
+								<button type="submit" class="btn btn-primary form-control formbox">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- This row has a black background  -->
+		<div class="row" id="footbar"> 
+			<div class="container">
+				<span class="align-text-middle">All images are copyright to there owners. This is just a hypothetical site</span>
+				<span class="pull-right">&copy;2014 Copyright Art Store</span>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

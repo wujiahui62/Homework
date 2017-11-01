@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" id="index">
+<head>
+	<title>Chapter5</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- link to bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- link to js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- link to google fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet'>
+	<!-- link to css -->
+	<link rel="stylesheet" href="css/artstore.css">
+</head>
+<body>
+    <main>
+
+    <!-- navbar -->
+        <nav class="navbar navbar-inverse transparent">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" id="navbrand" href="index.html">Assign 2</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="artists.html">Artists</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="images/boucher-s.png" alt="boucher">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Francois Boucher</h1>
+              <p>This painting entitled <span class="oblique">Madame de Pompadour</span> dates from 1758 and now resided in the National Gallery of Scotland.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="images/david-s.png" alt="david">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Jacques-Louis David</h1>
+              <p><span class="oblique">The Intervention of the Sabine Women</span> was painted in 1799 and resided in the Mus&egrave;e du Louvre, Paris.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="images/vermeer-s.png" alt="vermeer">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Jan Vermeer</h1>
+              <p><span class="oblique">The Art of Painting</span> is considered by many to be Vermeer's masterpiece</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- left and right carousel contril -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- wrap the three columns in another container and center all the contents -->
+    <div class="container portrait">
+
+      <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-circle" src="images/thumbs/120010.jpg" alt="Eleanor">
+                <h3>Portrait of Eleanor of Toledo</h3>
+                <p class="justify"><span class="oblique">The Portrait of Eleanor of Toledo and Her Son</span> is a painting by the Italian artist Agnolo di Cosimo, known as Bronzino, finished ca. 1545. One of his most famous works,it is housed in the Uffizi Gallery of Florence, Italy and is considered one of the preeminent examples of Mannerist portraiture.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-circle" src="images/thumbs/116010.jpg" alt="Thistle">
+                <h3>Portrait of the Artist</h3>
+                <p class="justify"><span class="oblique">Portrait of the Artist Holding a Thistle</span> is an oil painting on parchment pasted on canvas by German artist Albrecht Dürer. Painted in 1493. It is the earliest of Dürer's painted self-portraits and has been identified as one of the first self-portraits painted by a Northern artist.</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-circle" src="images/thumbs/106020.jpg" alt="Pearl">
+                <h3>Girl with a Pearl Earring</h3>
+                <p class="justify"><span class="oblique">Girl with a Pearl Earring</span> is one of Johannes Vermeer's masterworks and, as the name implies, uses a pearl earring for a focal point. Today the painting is kept in the Mauritshuis gallery in the Hague. It is sometimes referred to as "the Mona Lisa of the North" or "the Dutch Mona Lisa"</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footerblank"></footer>
+</body>
+</html>

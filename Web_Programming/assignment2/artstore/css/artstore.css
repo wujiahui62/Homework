@@ -1,0 +1,166 @@
+/*general styling to all html pages
+*/
+/*reset the css parameter
+*/
+html, body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.heavy{
+	font-weight: 500;
+}
+
+.oblique{
+	font-style: italic;
+}
+
+
+#navbar-text, #myNavbar .textcolor1 li a{
+	color: rgb(200, 200, 200);
+}
+
+h1{
+	position: relative;
+	bottom: 0.2em;
+	font-family: 'Just Another Hand', sans-serif, serif;
+}
+
+
+h2, h3, h4, .navbar2nd, #navbar ul li a{
+	font-family: 'Josefin Sans', sans-serif, serif;
+}
+
+/*for the blank space on the bottom of about, index and artists pages*/
+.footerblank{
+	height: 5em;
+	background-color: white;
+}
+
+/*==================style the work page=========*/
+#search{
+	position: relative;
+	top: 0.5em;
+	right: 10em;
+}
+
+.button1{
+	border: 1px solid #E3E3E3;
+}
+
+
+.textcolor2, .textcolor2 a:hover{
+	color: rgb(248, 248, 248) !important;
+}
+
+#price{
+	color: red;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+footer{
+	background-color: #E7E7E7;
+}
+
+#footbar{
+	margin-top: 0.2em;
+	height: 3.5em;
+	line-height: 3.5em;
+	background-color: #393A36;
+	color: #5B5C57;
+}
+
+.formbox{
+	margin-bottom: 0.4em;
+}
+
+/*==================== page about.html===================*/
+/*jumbotron styline
+*/
+.jumbotron{
+	background: url("../images/whistler.png")repeat-x;
+	padding: 6em;
+}
+
+p.jumbotext{
+	font-weight: 400;
+	font-size: 1.2em;
+}
+
+.style{
+	font-family: 'Josefin Sans', sans-serif, serif;
+	font-size: 1.25em;
+}
+
+/*=====================page index.html=======================*/
+
+/*position the navbar on top of the carousel*/
+.transparent{
+	position: absolute;
+  	top: 0;
+  	right: 0;
+  	left: 0;
+  	z-index: 20;
+	background: transparent;
+	border:0;
+	margin-left: 3em;
+	margin-top: 3em;
+}
+
+#navbrand{
+	color: rgb(248, 248, 248);
+	font-family: 'Just Another Hand', sans-serif, serif;
+	font-size: 3em;
+}
+
+#navbar ul li a{
+	color: rgb(248, 248, 248);
+	font-size: 1.5em;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 640px;
+  margin-bottom: 5em;
+}
+
+/* Declare heights of each item */
+.carousel .item {
+  height: 640px;
+}
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 640px;
+}
+
+/*style the carousel caption*/
+.carousel-caption p {
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+
+/* align the text within the three columns below the carousel */
+
+.portrait .row .col-md-4{
+  text-align: center;
+}
+
+.justify{
+	text-align: justify;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+
+
+

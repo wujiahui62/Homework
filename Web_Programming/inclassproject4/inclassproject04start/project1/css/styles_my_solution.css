@@ -1,0 +1,164 @@
+body{
+/*    height: 100%;
+*/    width:100%;
+}
+
+body, header, div, p, h1, h2, h3, h4 {
+   margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', "Times New Roman", serif;
+}
+header h1, header h2 {
+    color: white;
+}
+header h1 {
+    font-size: 48px;
+}
+header h2 {
+    font-size: 36px;
+    margin-bottom: 0.5em;
+}
+header span {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+    width: 160px;
+    padding: 9px;
+    border: solid 1px white;
+}
+header span a:link, header span a:visited {
+    color: white;
+}
+     
+.banner{
+    width:100%;
+    -webkit-filter:brightness(30%) grayscale(90%);
+    filter:brightness(30%) grayscale(90%);
+}
+.banner--title{
+    position: absolute;
+    top: 150px;
+    left: 20%;
+    text-align: center;
+    filter:brightness(80%);
+
+}
+
+article{
+    margin: 20px 45px 0 45px;
+
+}
+
+.highlights{
+    overflow: auto;
+}
+
+
+.highlights h2{
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.highlights--container{
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.highlights--media{
+    float:left;
+    width: auto;
+    margin-right: 0.5em;
+}
+.highlights--text{
+    font-size: 80%;
+     margin-right: 0.5em;
+}
+
+.highlights--button{
+    float: right;
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 2px;
+    margin-right: 0.5em;
+    margin-top: 1em;
+}
+
+.mosaic{
+    position: relative;
+}
+
+.mosaic-item_mosaic--a{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mosaic-item_mosaic--b{
+    position: absolute;
+    top: 0;
+    left: 590px;
+}
+
+.mosaic-item_mosaic--c{
+    position: absolute;
+    top: 200px;
+    left: 590px;
+}
+
+.mosaic-item_mosaic--d{
+    position: absolute;
+    top: 0;
+    left: 885px;
+}
+
+.mosaic-item_mosaic--e{
+    position: absolute;
+    top: 400px;
+    left: 0;
+}
+
+.mosaic-item_mosaic--f{
+    position: absolute;
+    top: 400px;
+    left: 295px;
+}
+
+.mosaic-item_mosaic--g{
+    position: absolute;
+    top: 400px;
+    left: 590px;
+}
+
+.mosaic-item_mosaic--h{
+    position: absolute;
+    top: 400px;
+    left: 885px;
+}
+
+.mosaic-item_mosaic--i{
+    position: absolute;
+    top: 800px;
+    left: 0;
+}
+
+.mosaic-item_mosaic--j{
+    position: absolute;
+    top: 600px;
+    left: 295px;
+}
+
+.mosaic-item_mosaic--k{
+    position: absolute;
+    top: 800px;
+    left: 885px;
+}
+
+
+
+
+
