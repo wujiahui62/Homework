@@ -7,7 +7,8 @@ SBP_FILE_PATH = "SBP-home.csv"
 TIME_COLUMN_NAME = "time"
 TIME_FORMAT = "%H:%M"
 
-def sum_episodes(df):
+
+def process(df):
     if len(df) == 0:
         return {}
     prev_time = df.iloc[0, TIME_COLUMN]
@@ -18,24 +19,28 @@ def sum_episodes(df):
         curr_id = df.iloc[row, ID_COLUMN]
         if df.iloc[row, SBP_COLUMN] < 70:
             curr_item = result.get(curr_id, {"num_episodes": 0, "cumulative_minutes": 0})
-            # encounter the first SBP value < 70 for this ID
+            # Start the first episode for the current ID
             if curr_id not in result:
                 keep_accumulating = False
-            # Should increment number of episodes since this row is not accumulating but starting a new episode
-            # Should reset the previous time since it is a new episode
+            # Reset the previous time for a new episode
             if not keep_accumulating:
                 curr_item["num_episodes"] += 1
                 prev_time = df.iloc[row, TIME_COLUMN]
-            curr_item["cumulative_minutes"] += int (((df.iloc[row, TIME_COLUMN] - prev_time).total_seconds()) / 60)
+            curr_item["cumulative_minutes"] += timedelta_to_minute(df.iloc[row, TIME_COLUMN], prev_time)
             result[curr_id] = curr_item
             keep_accumulating = True
         # Do not handle the case when keep_accumulating = False, no episode in this case
         elif df.iloc[row, SBP_COLUMN] >= 70 and keep_accumulating:
-            result.get(curr_id)["cumulative_minutes"] += int (((df.iloc[row, TIME_COLUMN] - prev_time).total_seconds()) / 60)
-            # Set the flag to False to end this episode
+            result.get(curr_id)["cumulative_minutes"] += timedelta_to_minute(df.iloc[row, TIME_COLUMN], prev_time)
+            # Finish the current episode
             keep_accumulating = False
         prev_time = df.iloc[row, TIME_COLUMN]
     return result
+
+
+def timedelta_to_minute(time1, time2):
+    """Take in two datetime object, convert the timedelta to minute in int format"""
+    return int (((time1 - time2).total_seconds()) / 60)
 
 
 if __name__ == "__main__":
@@ -43,7 +48,7 @@ if __name__ == "__main__":
     sbp_data = pd.read_csv(SBP_FILE_PATH)
     # convert the time column into timestamp
     sbp_data[TIME_COLUMN_NAME] = pd.to_datetime(sbp_data[TIME_COLUMN_NAME], format=TIME_FORMAT)
-    data = sum_episodes(sbp_data)
+    data = process(sbp_data)
     print(pd.DataFrame(data))
 
 
