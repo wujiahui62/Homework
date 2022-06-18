@@ -46,3 +46,10 @@ if __name__ == "__main__":
     data = sum_episodes(sbp_data)
     data_frame = pd.DataFrame(data)
     print(data_frame)
+
+"""
+Result:
+                    1   12  13  15  16  17  29  32  37  38  45  59  61  66  68
+num_episodes         2   1   2   1   1   3   1   5   1   1   2   1   5   1   1
+cumulative_minutes   3   4   9   3   1   6   5  12   1   3  10   6  13   5   2
+"""
