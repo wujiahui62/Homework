@@ -5,7 +5,6 @@ TIME_COLUMN = 1
 SBP_COLUMN = 2
 SBP_FILE_PATH = "SBP-home.csv"
 
-
 def sum_episodes(brics):
     if len(brics)==0:
         return {}
@@ -30,11 +29,9 @@ def sum_episodes(brics):
             keep_accumulating = True
         # Do not handle the case when keep_accumulating = False, no episode in this case
         elif brics.iloc[row, SBP_COLUMN] >= 70 and keep_accumulating:
+            result.get(curr_id)["cumulative_minutes"] += int (((brics.iloc[row, TIME_COLUMN] - prev_time).total_seconds()) / 60)
             # Set the flag to False to end this episode
             keep_accumulating = False
-            curr_item = result.get(curr_id, {"num_episodes": 1, "cumulative_minutes": 0})
-            curr_item["cumulative_minutes"] += int (((brics.iloc[row, TIME_COLUMN] - prev_time).total_seconds()) / 60)
-            result[curr_id] = curr_item
         prev_time = brics.iloc[row, TIME_COLUMN]
     return result
 
@@ -45,8 +42,8 @@ if __name__ == "__main__":
     # convert the time column into timestamp
     sbp_data["time"] = pd.to_datetime(sbp_data["time"], format="%H:%M")
     data = sum_episodes(sbp_data)
-    data_frame = pd.DataFrame(data)
-    print(data_frame)
+    print(pd.DataFrame(data))
+
 
 """
 Result:
