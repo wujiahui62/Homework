@@ -3,6 +3,7 @@ import pandas as pd
 ID_COLUMN = 0
 TIME_COLUMN = 1
 SBP_COLUMN = 2
+SBP_FILE_PATH = "SBP-home.csv"
 
 
 def sum_episodes(brics):
@@ -40,7 +41,7 @@ def sum_episodes(brics):
 
 if __name__ == "__main__":
     # Read the file into a DataFrame
-    sbp_data = pd.read_csv("SBP-home.csv")
+    sbp_data = pd.read_csv(SBP_FILE_PATH)
     # convert the time column into timestamp
     sbp_data["time"] = pd.to_datetime(sbp_data["time"], format="%H:%M")
     data = sum_episodes(sbp_data)
