@@ -1,4 +1,5 @@
 import pandas as pd
+import time
 
 ID_COLUMN = 0
 TIME_COLUMN = 1
@@ -56,6 +57,8 @@ def find_lowest_sbp(df):
             prev_timestamp = df.iloc[row, TIME_COLUMN]
         new_sbp_duration = []
         for sbp, duration in sbp_durations[curr_id]:
+            if sbp > curr_min_sbp[curr_id][0]:
+                continue
             if sbp >= curr_sbp:
                 duration += timedelta_to_minute(curr_timestamp, prev_timestamp)
                 new_sbp_duration.append((sbp, duration))
@@ -107,4 +110,3 @@ Result for the third question:
 57: (100, 10), 58: (94, 20), 59: (101, 12), 60: (124, 20), 61: (92, 14), 62: (112, 10), 63: (103, 15), 64: (86, 12), 
 65: (102, 15), 66: (77, 10), 67: (130, 12), 68: (87, 11), 69: (103, 10)}
 """
-
