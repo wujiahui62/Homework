@@ -39,7 +39,7 @@ def process(df):
 
 def timedelta_to_minute(time1, time2):
     """Take in two datetime object, convert the timedelta to minute in int format"""
-    return int (((time1 - time2).total_seconds()) / 60)
+    return int(((time1 - time2).total_seconds()) / 60)
 
 
 def find_lowest_sbp(df):
