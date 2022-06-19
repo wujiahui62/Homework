@@ -29,10 +29,9 @@ def process(df):
             curr_item["cumulative_minutes"] += timedelta_to_minute(df.iloc[row, TIME_COLUMN], prev_time)
             result[curr_id] = curr_item
             keep_accumulating = True
-        # Do not handle the case when keep_accumulating = False, no episode in this case
-        elif df.iloc[row, SBP_COLUMN] >= 70 and keep_accumulating:
+        # Finish the current episode when SBP >= 70 while the previous SBP < 70
+        elif keep_accumulating:
             result.get(curr_id)["cumulative_minutes"] += timedelta_to_minute(df.iloc[row, TIME_COLUMN], prev_time)
-            # Finish the current episode
             keep_accumulating = False
         prev_time = df.iloc[row, TIME_COLUMN]
     return result
