@@ -59,11 +59,8 @@ def find_lowest_sbp(df):
         for sbp, duration in sbp_durations[curr_id][:-1]:
             if sbp >= curr_sbp:
                 duration += timedelta_to_minute(curr_timestamp, prev_timestamp)
-                if duration >= 10:
-                    curr_min_sbp[curr_id] = compare_sbp_duration(curr_min_sbp[curr_id], (sbp, duration))
                 new_sbp_duration.append((sbp, duration))
-            # Duration stopped, needs to remove it from the list
-            elif duration >= 10:
+            if duration >= 10:
                 curr_min_sbp[curr_id] = compare_sbp_duration(curr_min_sbp[curr_id], (sbp, duration))
         new_sbp_duration.append(sbp_durations[curr_id][-1])
         sbp_durations[curr_id] = new_sbp_duration
